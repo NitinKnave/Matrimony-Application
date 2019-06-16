@@ -161,8 +161,10 @@ public class UserListRecyAdapter extends RecyclerView.Adapter<UserListRecyAdapte
         @Override
         public void onAnimationEnd(Animation animation) {
             try {
-                result = results.get(getAdapterPosition());
-                resPosition = getAdapterPosition();
+                if (isCancelled){
+                    result = results.get(getAdapterPosition());
+                    resPosition = getAdapterPosition();
+                }
                 results.remove(getAdapterPosition()); //Remove the current content from the array
                 notifyDataSetChanged(); //Refresh list
                 if (isCancelled){

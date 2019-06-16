@@ -2,4 +2,5 @@
     <string name="app_name">MatrimonyApp</string>
     <string name="try_again">Try Again</string>
     <string name="undo">undo</string>
+    <string name="internet_not_aval">Internet Not Avalible</string>
 </resources>

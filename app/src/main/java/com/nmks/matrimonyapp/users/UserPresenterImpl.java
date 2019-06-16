@@ -9,6 +9,7 @@ import android.widget.Adapter;
 
 import com.google.gson.Gson;
 import com.nmks.matrimonyapp.MainActivity;
+import com.nmks.matrimonyapp.R;
 import com.nmks.matrimonyapp.adapter.UserListRecyAdapter;
 import com.nmks.matrimonyapp.entities.RandomUserListData;
 import com.nmks.matrimonyapp.entities.Result;
@@ -64,7 +65,7 @@ public class UserPresenterImpl implements UsersContract.UserPresenter{
         callAPI(); if (new Utils().isNetworkAvailable(mContext)){
             callAPI();
         }else {
-            usersView.showSnackbar("Internet Not Avalible");
+            usersView.showSnackbar(mContext.getString(R.string.internet_not_aval));
         }
     }
 
@@ -73,7 +74,7 @@ public class UserPresenterImpl implements UsersContract.UserPresenter{
         if (new Utils().isNetworkAvailable(mContext)){
             callAPI();
         }else {
-           usersView.showSnackbar("Internet Not Avalible");
+           usersView.showSnackbar(mContext.getString(R.string.internet_not_aval));
         }
 
 
