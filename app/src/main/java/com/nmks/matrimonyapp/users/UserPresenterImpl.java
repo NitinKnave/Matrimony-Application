@@ -62,7 +62,7 @@ public class UserPresenterImpl implements UsersContract.UserPresenter{
 
     @Override
     public void showList() {
-        callAPI(); if (new Utils().isNetworkAvailable(mContext)){
+        if (new Utils().isNetworkAvailable(mContext)){
             callAPI();
         }else {
             usersView.showSnackbar(mContext.getString(R.string.internet_not_aval));
